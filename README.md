@@ -60,7 +60,7 @@ All names, sources and events below are fictional (Vantage Rail Holdings).
 |---|---|---|---|---|---|
 | Vantage Rail paid a $2.3M settlement in 2024. | Court records (S1) | L0 — Verbatim | SUPPORTED | HISTORICAL_STABLE | A historical fact doesn't decay just because time passed. |
 | A former safety employee claims the company knew about the defect six months earlier. | Anonymous source (S2), attribution preserved | L0 — Verbatim | SUPPORTED | CURRENT | Attribution intact — no boundary event. |
-| The company knew about the brake defect six months before the accident. | Same source, attribution removed | L5 | UNRESOLVED* | CURRENT | Losing attribution is a critical boundary event, flagged regardless of L-code. |
+| The company knew about the brake defect six months before the accident. | Same source, attribution removed | L5 | —* | CURRENT | Losing attribution is a critical boundary event, flagged regardless of L-code. |
 
 \*Support from the attributed claim does not transfer automatically; the exact resulting support state is not frozen in v1.04.
 
