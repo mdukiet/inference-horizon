@@ -24,7 +24,7 @@ Gate-based evidence workflows, including an earlier one of mine, can treat a cla
 
 | Problem | What it looks like |
 |---|---|
-| Conflating stale with false | A claim loses "current" applicability over time, but a binary system has no way to say that without marking it wrong. |
+| Conflating stale with false | A justification that was sufficient at one point may no longer be sufficient for treating a claim as current, without making the claim itself false. |
 | Conflating contradiction with full reset | New counter-evidence should weaken a specific claim, not wipe its history or force a global re-evaluation. |
 | Conflating attribution with the claim itself | "Source X says Y" and "Y" are different claims. Losing attribution during a rewrite is a critical, trackable event, not a style choice. |
 
