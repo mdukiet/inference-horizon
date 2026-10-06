@@ -19,7 +19,7 @@ A discrete taxonomy (L0–L6) exists only as an operational projection of this s
 Initial target domain, introduced in v1.01: investigative journalism (fictional cases only).
 
 > ## How it works
-> Inference Horizon represents each claim across independent state dimensions and tests whether revision should occur only when the underlying justification meaningfully changes.
+Inference Horizon represents each claim across independent state dimensions and tests whether revision should occur only when the underlying justification meaningfully changes.
 
 <p align="center">
   <img src="Inference-horizon-state-model.png" alt="Inference Horizon state model" width="900">
