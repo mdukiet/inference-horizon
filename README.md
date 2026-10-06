@@ -118,6 +118,8 @@ Similarity to existing work isn't a failure of this project; it narrows what nov
 ## What is in this repository
 
 - `README.md` — this overview
+- `Inference-horizon-state-model.png`: the state model
+- `LICENSE`: terms of use
 
 The full specification and diagnostic test log are not published in this repository. If you'd like to discuss the architecture in more detail, please get in touch.
 
