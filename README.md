@@ -1,16 +1,16 @@
 # Inference Horizon
 
-A spatial-cloud model for tracking how justification changes, ages, and loses validity over time.
+A spatial-cloud model for tracking how justification changes, ages, and loses current applicability over time.
 
 ## What this is
 
 Inference Horizon (IH) asks a narrower question than Claim Gate: not "is this claim supported right now", but "does a justification that was once valid still apply, and how would a system know?"
 
-The concept is spatial, not a linear gate: justification is modeled as a cloud whose state of matter changes along an irregular axis — becoming more diffuse where justification is weaker, less stable or more inferential, and more consolidated where justification is stronger and better supported.
+The concept is spatial, not a linear gate: justification is modeled as a cloud whose state of matter changes as different dimensions of justification vary — becoming more diffuse where the overall justificatory situation is less stable, more conditional or less well supported, and more consolidated where support and applicability are stronger.
 
 This spatial metaphor is not equivalent to the discrete inference taxonomy used in the current implementation.
 
-A discrete taxonomy (L0–L6) exists only as a necessary projection of this space for one dimension — the type of epistemic move — because a language model must commit to a finite vocabulary. It is not a confidence score, and temporal decay must never shift a claim between L-codes.
+A discrete taxonomy (L0–L6) exists only as an operational projection of this space for one dimension — the type of epistemic move — so that the model can commit to a finite, testable set of state labels. It is not a confidence score, and temporal decay must never shift a claim between L-codes.
 
 Initial target domain, introduced in v1.01: investigative journalism (fictional cases only).
 
@@ -20,7 +20,7 @@ Initial target domain, introduced in v1.01: investigative journalism (fictional 
 
 ## Why it exists
 
-Most evidence-checking systems, including an earlier one of mine, treat a claim as settled once it passes a gate. Three things that get lost in that model:
+Gate-based evidence workflows, including an earlier one of mine, can treat a claim as settled once it passes a gate. Three things that get lost in that model:
 
 | Problem | What it looks like |
 |---|---|
@@ -39,7 +39,7 @@ Each atomic claim is tracked on independent axes, not a single verdict:
 | `inference_move` | L0–L6 | Type of epistemic move only. Not a confidence score. L6 means fabrication, not "low confidence." |
 | `support_state` | SUPPORTED / QUALIFIED / CHALLENGED / UNRESOLVED / UNSUPPORTED | Independent of inference type. |
 | `temporal_state` | CURRENT / AGING / REVALIDATION_REQUIRED / HISTORICAL_STABLE | HISTORICAL_STABLE means no decay from time alone — new evidence can still destabilize it. |
-| `probability_band` | optional, ICD 203 scale | Annotation only. Does not map onto L0–L6 or replace the other two states. |
+| `probability_band` | optional, ICD 203-aligned probability bands | Annotation only. Does not map onto L0–L6 or replace the other two states. |
 
 ## Revision Symmetry
 
@@ -58,13 +58,15 @@ All names, sources and events below are fictional (Vantage Rail Holdings).
 
 | Claim | Evidence | inference_move | support_state | temporal_state | Why |
 |---|---|---|---|---|---|
-| Vantage Rail paid a $2.3M settlement in 2024. | Court records (S1) | L0 Verbatim | SUPPORTED | HISTORICAL_STABLE | A historical fact doesn't decay just because time passed. |
-| A former safety employee claims the company knew about the defect six months earlier. | Anonymous source (S2), attribution preserved | L1 Interpretation | SUPPORTED | CURRENT | Attribution intact — no boundary event. |
-| The company knew about the brake defect six months before the accident. | Same source, attribution removed | L5 | support not transferred from attributed claim | CURRENT | Losing attribution is a critical boundary event, flagged regardless of L-code. |
+| Vantage Rail paid a $2.3M settlement in 2024. | Court records (S1) | L0 - Verbatim | SUPPORTED | HISTORICAL_STABLE | A historical fact doesn't decay just because time passed. |
+| A former safety employee claims the company knew about the defect six months earlier. | Anonymous source (S2), attribution preserved | L0 Verbatim | SUPPORTED | CURRENT | Attribution intact — no boundary event. |
+| The company knew about the brake defect six months before the accident. | Same source, attribution removed | L5 | UNRESOLVED* | CURRENT | Losing attribution is a critical boundary event, flagged regardless of L-code. |
+*Support from the attributed claim does not transfer automatically; the exact resulting support state is not frozen in v1.04.
 
 ## Status
 
-Inference Horizon is a self-initiated prototype, v1.04, frozen at **Diagnostic Run 1**. It is my second LLM architecture experiment.
+Inference Horizon is a self-initiated prototype. Baseline v1.04 was frozen after **Diagnostic Run 1** and subsequently tested unchanged across additional LLM environments. 
+In the initial ChatGPT run, one mechanism — Consolidation — returned AMBIGUOUS because the baseline requires a state change without specifying the concrete transition; the run correctly refused to invent one.
 
 Diagnostic Run 1 ran every trigger/matched-non-trigger pair defined in the baseline (materiality, temporal decay, destabilization, attribution boundary, consolidation).
 
@@ -74,9 +76,9 @@ One mechanism — Consolidation — returned AMBIGUOUS, because the baseline req
 
 ### Cross-model diagnostic
 
-The v1.04 baseline was subsequently run across three black-box LLM environments: ChatGPT, Gemini and Copilot.
+The v1.04 baseline was subsequently run across three black-box LLM environments: ChatGPT, Gemini, Copilot.
 
-All three reproduced the same broad directional behavior:
+All three broadly reproduced the same directional behavior across the available test cases:
 
 - stale information was not treated as false,
 - historical records were preserved,
@@ -110,16 +112,16 @@ This is treated as a diagnostic finding, not as validation of the architecture.
 IH builds on published ideas rather than claiming to originate them:
 
 - Belief-R / ΔR (Wilie et al., 2024) — methodological anchor for separating UPDATE from MAINTAIN.
-- Temporal justification logic (Ghari, 2021/2024) — prior art for formal temporal-epistemic reasoning.
-- CAE / Micropublications — prior art for modeling claims, evidence, attribution and provenance explicitly.
+- Temporal justification logic (Ghari, 2021; journal version 2024) — prior art for formal temporal-epistemic reasoning.
+- Micropublications (Clark, Ciccarese & Goble, 2014) — prior art for explicit modeling of claims, evidence, attribution, support and challenge.
 
 Similarity to existing work isn't a failure of this project; it narrows what novelty can be claimed. Whether IH's specific combination is novel remains open.
 
 ## What is in this repository
 
 - `README.md` — this overview
-- `Inference-horizon-state-model.png`: the state model
-- `LICENSE`: terms of use
+- `Inference-horizon-state-model.png` — the state model
+- `LICENSE` — terms of use
 
 The full specification and diagnostic test log are not published in this repository. If you'd like to discuss the architecture in more detail, please get in touch.
 
