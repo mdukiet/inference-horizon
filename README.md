@@ -66,7 +66,7 @@ All names, sources and events below are fictional (Vantage Rail Holdings).
 
 ## Status
 
-Inference Horizon is a self-initiated prototype. Baseline v1.04 was frozen after **Diagnostic Run 1** and subsequently tested unchanged across additional LLM environments.
+Inference Horizon is a self-initiated prototype. Baseline v1.04 was frozen before **Diagnostic Run 1** and then kept unchanged for subsequent cross-model testing.
 
 Diagnostic Run 1 evaluated every trigger/matched-non-trigger pair defined in the baseline (materiality, temporal decay, destabilization, attribution boundary, consolidation).
 
