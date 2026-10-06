@@ -6,6 +6,8 @@ A spatial-cloud model for tracking how justification changes, ages, and loses cu
 
 Inference Horizon (IH) asks a narrower question than Claim Gate: not "is this claim supported right now", but "does a justification that was once valid still apply, and how would a system know?"
 
+A newspaper article from 2018 may still accurately report what happened in 2018. What may change is not the historical fact, but whether that article is still sufficient evidence for a claim about the present. Inference Horizon is designed to track that distinction instead of collapsing both cases into a simple true/false verdict.
+
 The concept is spatial, not a linear gate: justification is modeled as a cloud whose state of matter changes as different dimensions of justification vary — becoming more diffuse where the overall justificatory situation is less stable, more conditional or less well supported, and more consolidated where support and applicability are stronger.
 
 This spatial metaphor is not equivalent to the discrete inference taxonomy used in the current implementation.
