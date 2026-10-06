@@ -100,7 +100,6 @@ The original run surfaced Consolidation as AMBIGUOUS because the baseline does n
 A second ambiguity also reproduced across models: the distinction between a historically valid atomic claim and the present-day applicability of the evidence supporting that claim.
 
 The current cross-model result is therefore:
-
 **directionally consistent, but not yet specification-deterministic.**
 
 This is treated as a diagnostic finding, not as validation of the architecture.
@@ -130,7 +129,7 @@ Similarity to existing work isn't a failure of this project; it narrows what nov
 - `Inference-horizon-state-model.png` — the state model
 - `LICENSE` — terms of use
 
-The full specification and diagnostic test log are not published in this repository. If you'd like to discuss the architecture in more detail, please get in touch.
+The full specification and diagnostic test log are **not published** in this repository. If you would like to discuss the architecture in more detail, please get in touch.
 
 ## License
 
