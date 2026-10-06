@@ -56,27 +56,27 @@ Example pair:
 
 All names, sources and events below are fictional (Vantage Rail Holdings).
 
-| Claim | Evidence | inference_move | support_state | temporal_state | Why |
+| **Claim** | **Evidence** | **inference_move** | **support_state** | **temporal_state** | **Why** |
 |---|---|---|---|---|---|
-| Vantage Rail paid a $2.3M settlement in 2024. | Court records (S1) | L0 - Verbatim | SUPPORTED | HISTORICAL_STABLE | A historical fact doesn't decay just because time passed. |
-| A former safety employee claims the company knew about the defect six months earlier. | Anonymous source (S2), attribution preserved | L0 Verbatim | SUPPORTED | CURRENT | Attribution intact — no boundary event. |
+| Vantage Rail paid a $2.3M settlement in 2024. | Court records (S1) | L0 — Verbatim | SUPPORTED | HISTORICAL_STABLE | A historical fact doesn't decay just because time passed. |
+| A former safety employee claims the company knew about the defect six months earlier. | Anonymous source (S2), attribution preserved | L0 — Verbatim | SUPPORTED | CURRENT | Attribution intact — no boundary event. |
 | The company knew about the brake defect six months before the accident. | Same source, attribution removed | L5 | UNRESOLVED* | CURRENT | Losing attribution is a critical boundary event, flagged regardless of L-code. |
-*Support from the attributed claim does not transfer automatically; the exact resulting support state is not frozen in v1.04.
+
+\*Support from the attributed claim does not transfer automatically; the exact resulting support state is not frozen in v1.04.sing attribution is a critical boundary event, flagged regardless of L-code. |
 
 ## Status
 
-Inference Horizon is a self-initiated prototype. Baseline v1.04 was frozen after **Diagnostic Run 1** and subsequently tested unchanged across additional LLM environments. 
-In the initial ChatGPT run, one mechanism — Consolidation — returned AMBIGUOUS because the baseline requires a state change without specifying the concrete transition; the run correctly refused to invent one.
+Inference Horizon is a self-initiated prototype. Baseline v1.04 was frozen after **Diagnostic Run 1** and subsequently tested unchanged across additional LLM environments.
 
 Diagnostic Run 1 ran every trigger/matched-non-trigger pair defined in the baseline (materiality, temporal decay, destabilization, attribution boundary, consolidation).
 
 No definitive mechanism failure was identified in the executable cases. However, several results remain qualified by incomplete test specifications and unresolved state-representation ambiguities.
 
-One mechanism — Consolidation — returned AMBIGUOUS, because the baseline requires a state change without specifying the concrete transition; the run correctly refused to invent one.
+In the initial ChatGPT run, one mechanism — Consolidation — returned AMBIGUOUS because the baseline requires a state change without specifying the concrete transition; the run correctly refused to invent one.
 
 ### Cross-model diagnostic
 
-The v1.04 baseline was subsequently run across three black-box LLM environments: ChatGPT, Gemini, Copilot.
+The v1.04 baseline was subsequently run across three black-box LLM environments: ChatGPT, Gemini, and Copilot.
 
 All three broadly reproduced the same directional behavior across the available test cases:
 
@@ -102,7 +102,7 @@ This is treated as a diagnostic finding, not as validation of the architecture.
 
 - The taxonomy currently implemented is a discrete, three-axis projection of the original continuous spatial model. Whether this projection fully preserves the source intuition, or has quietly flattened it, is still an open question — not yet resolved in either direction.
 - Several matched non-trigger controls are defined directionally but not as fully instantiated test cases.
-- The run surfaced an unresolved question: whether historical claim truth and present-day evidence-to-claim applicability need separate state-bearing objects. Not yet treated as an architectural conclusion.
+- Cross-model testing reproduced an unresolved question: whether historical claim truth and present-day evidence-to-claim applicability need separate state-bearing objects. This is not yet treated as an architectural conclusion.
 - Enforcement relies on the model following instructions, the same limitation as Claim Gate.
 - Cross-model diagnostic testing has been performed across three LLM environments, but all runs were designed, executed and reviewed within this project. No independent external evaluation has been conducted.
 - Because the full baseline specification and diagnostic log are not currently public, the reported results should be treated as self-reported diagnostic findings rather than independently reproducible or externally validated results.
