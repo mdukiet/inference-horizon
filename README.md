@@ -8,6 +8,8 @@ Inference Horizon (IH) asks a narrower question than Claim Gate: not "is this cl
 
 A newspaper article from 2018 may still accurately report what happened in 2018. But it may no longer be sufficient evidence for a claim about what is true today. Inference Horizon tracks that difference instead of collapsing both cases into a simple true/false verdict.
 
+**Inference Horizon is not a truth model. It is a model of how the applicability of justification changes over time.**
+
 The concept is spatial, not a linear gate: justification is modeled as a cloud whose state of matter changes as different dimensions of justification vary — becoming more diffuse where the overall justificatory situation is less stable, more conditional or less well supported, and more consolidated where support and applicability are stronger.
 
 This spatial metaphor is not equivalent to the discrete inference taxonomy used in the current implementation.
