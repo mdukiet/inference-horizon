@@ -12,7 +12,7 @@ This spatial metaphor is not equivalent to the discrete inference taxonomy used 
 
 A discrete taxonomy (L0–L6) exists only as a necessary projection of this space for one dimension — the type of epistemic move — because a language model must commit to a finite vocabulary. It is not a confidence score, and temporal decay must never shift a claim between L-codes.
 
-Target domain for v1.01: investigative journalism (fictional cases only).
+Initial target domain, introduced in v1.01: investigative journalism (fictional cases only).
 
 <p align="center">
   <img src="Inference-horizon-state-model.png" alt="Inference Horizon state model" width="900">
