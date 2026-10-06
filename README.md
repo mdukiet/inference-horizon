@@ -14,6 +14,10 @@ A discrete taxonomy (L0–L6) exists only as a necessary projection of this spac
 
 Target domain for v1.01: investigative journalism (fictional cases only).
 
+<p align="center">
+  <img src="Inference-horizon-state-model.png" alt="Inference Horizon state model" width="900">
+</p>
+
 ## Why it exists
 
 Most evidence-checking systems, including an earlier one of mine, treat a claim as settled once it passes a gate. Three things that get lost in that model:
