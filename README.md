@@ -127,4 +127,6 @@ Published for viewing only; may not be copied, modified, redistributed or used c
 
 Małgorzata Dukiet: art director, brand strategist, creative systems / AI workflow design.
 
+For contact and permission requests, please use the contact information linked from my GitHub profile.
+
 See also: [Claim Gate](https://github.com/mdukiet/claim-gate), a related project on evidence-based claim governance.
