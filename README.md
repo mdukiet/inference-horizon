@@ -125,7 +125,7 @@ The full specification and diagnostic test log are not published in this reposit
 
 ## License
 
-Copyright (c) 2026 Małgorzata Dukiet. All rights reserved. See [LICENCE](./LICENCE).
+Copyright (c) 2026 Małgorzata Dukiet. All rights reserved. See [LICENSE](./LICENSE).
 
 Published for viewing only; may not be copied, modified, redistributed or used commercially without written permission.
 
