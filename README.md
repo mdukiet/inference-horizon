@@ -62,13 +62,13 @@ All names, sources and events below are fictional (Vantage Rail Holdings).
 | A former safety employee claims the company knew about the defect six months earlier. | Anonymous source (S2), attribution preserved | L0 — Verbatim | SUPPORTED | CURRENT | Attribution intact — no boundary event. |
 | The company knew about the brake defect six months before the accident. | Same source, attribution removed | L5 | UNRESOLVED* | CURRENT | Losing attribution is a critical boundary event, flagged regardless of L-code. |
 
-\*Support from the attributed claim does not transfer automatically; the exact resulting support state is not frozen in v1.04.sing attribution is a critical boundary event, flagged regardless of L-code. |
+\*Support from the attributed claim does not transfer automatically; the exact resulting support state is not frozen in v1.04.
 
 ## Status
 
 Inference Horizon is a self-initiated prototype. Baseline v1.04 was frozen after **Diagnostic Run 1** and subsequently tested unchanged across additional LLM environments.
 
-Diagnostic Run 1 ran every trigger/matched-non-trigger pair defined in the baseline (materiality, temporal decay, destabilization, attribution boundary, consolidation).
+Diagnostic Run 1 evaluated every trigger/matched-non-trigger pair defined in the baseline (materiality, temporal decay, destabilization, attribution boundary, consolidation).
 
 No definitive mechanism failure was identified in the executable cases. However, several results remain qualified by incomplete test specifications and unresolved state-representation ambiguities.
 
