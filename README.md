@@ -59,6 +59,14 @@ Example pair:
 - *Trigger:* a company replaces its entire braking system after an earlier defect report → `temporal_state` moves to `REVALIDATION_REQUIRED`.
 - *Matched non-trigger:* the same company changes its visual branding → nothing changes, because the new information isn't materially relevant to the claim.
 
+## Diagnostic procedure
+
+The operational flow below shows how one diagnostic pass is executed. It is a procedure, not the IH state model, and does not expose the full v1.04 specification.
+
+<p align="center">
+  <img src="inference-horizon-operational-flow.png" alt="Inference Horizon operational flow" width="900">
+</p>
+
 ## Example
 
 All names, sources and events below are fictional (Vantage Rail Holdings).
